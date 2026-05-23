@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Memories | Custom Japan Trip Movie Service</title>
+    <meta name="description" content="Turn your Japan travel photos and videos into a cute, professional memory movie within 24 hours. Perfect for Instagram and TikTok.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css?v=11">
+</head>
+<body>
+
+    <!-- Header / Logo Area -->
+    <nav class="nav-minimal container">
+        <div class="logo">🌸 SakuraMemories</div>
+        <div class="language-toggle">
+            <button id="lang-en" class="lang-btn active">🇺🇸 EN</button>
+            <button id="lang-ja" class="lang-btn">🇯🇵 JA</button>
+            <button id="lang-it" class="lang-btn">🇮🇹 IT</button>
+            <button id="lang-fr" class="lang-btn">🇫🇷 FR</button>
+            <button id="lang-es" class="lang-btn">🇪🇸 ES</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero animate-fade">
+        <div class="container">
+            <h1 data-i18n="hero_h1">Turn Your Japan Trip Photos Into a <span class="highlight">Cute Memory Video</span></h1>
+            <p class="hero-sub" data-i18n="hero_sub">Send us your favorite photos and videos from Japan. We’ll create a 30–60 second memory movie within 24 hours.</p>
+            <p class="hero-secondary" data-i18n="hero_secondary">Don't let your memories fade away. Turn them into a movie.</p>
+            <div class="hero-btns">
+                <a href="#order-form" class="btn-primary btn-lg" data-i18n="cta_send">Order Your Movie Now</a>
+            </div>
+
+            <div class="video-preview-placeholder">
+                <div class="video-mock" style="padding: 0; overflow: hidden; position: relative; background: #000; border: 8px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    <!-- 実際のサンプル動画のURL（またはファイルパス）をここに設定してください -->
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <source src="sample.mp4" type="video/mp4">
+                    </video>
+                    <div class="mock-caption" style="position: absolute; bottom: 20px; left: 20px; background: rgba(255,255,255,0.9); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; z-index: 2; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" data-i18n="video_caption">Sample: Japan Trip 🌸</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem bg-beige">
+        <div class="container">
+            <h2 class="section-title" data-i18n="problem_title">Don't let your memories fade away</h2>
+            <div class="pain-points">
+                <div class="pain-item">
+                    <i data-lucide="camera-off"></i>
+                    <p data-i18n="problem_1">You took many photos in Japan but never edited them.</p>
+                </div>
+                <div class="pain-item">
+                    <i data-lucide="smartphone"></i>
+                    <p data-i18n="problem_2">Your memories are stuck in your camera roll.</p>
+                </div>
+                <div class="pain-item">
+                    <i data-lucide="clock"></i>
+                    <p data-i18n="problem_3">Editing videos takes too much time.</p>
+                </div>
+                <div class="pain-item">
+                    <i data-lucide="instagram"></i>
+                    <p data-i18n="problem_4">You want to post your Japan trip beautifully on social media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title" data-i18n="solution_title">The Perfect Japan Memory Movie</h2>
+            <ul class="solution-list">
+                <li><i data-lucide="check-circle"></i> <span data-i18n="solution_1">Send up to 30 photos and videos.</span></li>
+                <li><i data-lucide="palette"></i> <span data-i18n="solution_2">Choose your preferred video style.</span></li>
+                <li><i data-lucide="music"></i> <span data-i18n="solution_3">We add BGM, date, location, and text.</span></li>
+                <li><i data-lucide="zap"></i> <span data-i18n="solution_4">Receive your finished movie within 24 hours.</span></li>
+                <li><i data-lucide="refresh-cw"></i> <span data-i18n="solution_5">One free revision included.</span></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title" data-i18n="pricing_title">Simple Pricing</h2>
+            <p class="section-subtitle" data-i18n="pricing_subtitle" style="text-align: center; margin-top: -20px; margin-bottom: 40px; color: var(--text-muted); font-style: italic;">The Perfect Japan Memory Movie</p>
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="price-card">
+                    <h3 data-i18n="basic_title">Basic</h3>
+                    <div class="price" data-i18n="basic_price">Free</div>
+                    <ul>
+                        <li data-i18n="basic_feat1">Short sample memory video</li>
+                        <li data-i18n="basic_feat2">Great for trying the service</li>
+                        <li data-i18n="basic_feat3">Up to 7 photos/videos</li>
+                        <li data-i18n="basic_feat4">Simple edit</li>
+                    </ul>
+                    <a href="#order-form" class="btn-outline" data-i18n="order_basic">Try for Free</a>
+                </div>
+                <!-- Standard -->
+                <div class="price-card popular">
+                    <div class="popular-badge" data-i18n="most_popular">Most Popular</div>
+                    <h3 data-i18n="standard_title">Standard</h3>
+                    <div class="price" data-i18n="standard_price">¥980</div>
+                    <ul>
+                        <li data-i18n="standard_feat1">Approx. 30 seconds video</li>
+                        <li data-i18n="standard_feat2">Up to 15 photos/videos</li>
+                        <li data-i18n="standard_feat3">BGM included</li>
+                        <li data-i18n="standard_feat4">Date and location text</li>
+                        <li data-i18n="standard_feat6">Delivery within 24 hours</li>
+                    </ul>
+                    <a href="#order-form" class="btn-primary" data-i18n="order_standard">Order Standard</a>
+                </div>
+                <!-- Premium -->
+                <div class="price-card">
+                    <h3 data-i18n="premium_title">Premium</h3>
+                    <div class="price" data-i18n="premium_price">¥2,980</div>
+                    <ul>
+                        <li data-i18n="premium_feat1">30–60 second memory movie</li>
+                        <li data-i18n="premium_feat2">Up to 30 photos/videos</li>
+                        <li data-i18n="premium_feat3">More customized style</li>
+                        <li data-i18n="premium_feat4">Date, location, and story text</li>
+                        <li data-i18n="premium_feat5">Priority editing</li>
+                        <li data-i18n="premium_feat6">1 free revision</li>
+                    </ul>
+                    <a href="#order-form" class="btn-outline" data-i18n="order_premium">Order Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works bg-beige">
+        <div class="container">
+            <h2 class="section-title" data-i18n="how_title">How it Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4 data-i18n="step1_t">Fill out the order form</h4>
+                    <p data-i18n="step1_p">Tell us about your trip and choose your plan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4 data-i18n="step2_t">Complete Payment</h4>
+                    <p data-i18n="step2_p">Secure checkout via Square.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4 data-i18n="step3_t">Send photos via DM</h4>
+                    <p data-i18n="step3_p">Message us your photos/videos on Instagram @kouki501057.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4 data-i18n="step4_t">Receive Your Movie</h4>
+                    <p data-i18n="step4_p">We deliver your cute memory movie within 24 hours!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Trust / Safety -->
+    <section class="safety bg-beige">
+        <div class="container">
+            <h2 class="section-title" data-i18n="safety_title">Your Privacy Matters</h2>
+            <div class="safety-content">
+                <p><i data-lucide="shield-check"></i> <span data-i18n="safety1">We only use your photos/videos for your order.</span></p>
+                <p><i data-lucide="eye-off"></i> <span data-i18n="safety2">No public posting without your permission.</span></p>
+                <p><i data-lucide="undo-2"></i> <span data-i18n="safety3">One free revision included.</span></p>
+                <p><i data-lucide="clock-4"></i> <span data-i18n="safety4">Delivered within 24 hours.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-form-section" id="order-form">
+        <div class="container">
+            <div class="form-card">
+                <h2 class="section-title" data-i18n="form_title">Order Your Movie</h2>
+                <form id="main-order-form" novalidate>
+                    <div class="form-group">
+                        <label data-i18n="form_name">Your Name</label>
+                        <input type="text" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_ig">Instagram ID</label>
+                        <input type="text" name="instagram_id" required placeholder="@yourhandle">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_email">Email Address (Optional)</label>
+                        <input type="email" name="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_plan">Select Plan</label>
+                        <select name="plan" required>
+                            <option value="basic">Basic - Free</option>
+                            <option value="standard" selected>Standard - ¥980</option>
+                            <option value="premium">Premium - ¥2,980</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="form_vibe">Preferred Video Vibe</label>
+                        <select name="vibe" required>
+                            <option value="" disabled selected data-i18n="form_vibe_ph">Select a vibe...</option>
+                            <option value="calm" data-i18n="vibe_calm">Relaxing / Calm</option>
+                            <option value="fun" data-i18n="vibe_fun">Fun / Energetic</option>
+                            <option value="stylish" data-i18n="vibe_stylish">Stylish / Aesthetic</option>
+                            <option value="cool" data-i18n="vibe_cool">Cool / Cinematic</option>
+                            <option value="romantic" data-i18n="vibe_romantic">Romantic / Sweet</option>
+                            <option value="emotional" data-i18n="vibe_emotional">Emotional / Nostalgic</option>
+                            <option value="any" data-i18n="vibe_any">Creator's Choice (Leave it to us!)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_photos">Photos & Videos</label>
+                        <p class="form-note" data-i18n="form_photos_p" style="background: rgba(255, 183, 197, 0.1); padding: 10px; border-radius: 8px;">
+                            <i data-lucide="upload-cloud" style="vertical-align: middle; margin-right: 5px;"></i>
+                            After payment, please upload your photos and videos using the link provided after submission.
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_places">Main Places Visited</label>
+                        <textarea name="places" placeholder="e.g. Kyoto, Tokyo Disney, Osaka Castle"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_captions">Preferred Text/Captions</label>
+                        <textarea name="captions" placeholder="e.g. 'Our First Trip Together', 'Sakura 2024'"></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy-agreement" required>
+                        <label for="privacy-agreement" data-i18n="form_privacy">I agree that my photos/videos will be used only to create my ordered video.</label>
+                    </div>
+                    <div id="form-error-msg" style="display:none; color: white; background: #ff3b30; padding: 12px; border-radius: 8px; text-align: center; font-weight: 600; margin-bottom: 20px; font-size: 0.95rem; box-shadow: 0 4px 10px rgba(255, 59, 48, 0.3);"></div>
+                    <button type="submit" class="btn-primary full-width" data-i18n="form_submit">Send Order Request</button>
+                    
+                    <!-- Fallback message -->
+                    <p class="form-fallback-text" data-i18n="fallback_contact" style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
+                        *If the form doesn't work, please contact us via Instagram DM!
+                    </p>
+                </form>
+                
+                <!-- Hidden Iframe for reliable submission -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted){window.showSuccess();}"></iframe>
+                
+                <div id="form-success" class="hidden">
+                    <div class="success-message" style="text-align: center; padding: 40px 20px;">
+                        <div class="success-icon" style="font-size: 64px; margin-bottom: 20px;">🌸</div>
+                        <h3 data-i18n="success_title" style="font-size: 1.8rem; color: var(--sakura-dark);">Order Received!</h3>
+                        
+                        <p style="margin-bottom: 25px; color: var(--text-main); font-weight: 600; line-height: 1.6;" data-i18n="success_guide">
+                            The payment screen has opened in a new tab.<br>
+                            After completing your payment, please return to this screen and tap the button below.
+                        </p>
+                        
+                        <div style="background: white; padding: 25px 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid #0061FE; max-width: 350px; margin: 0 auto;">
+                            <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-muted);" data-i18n="success_step2_desc">Upload your photos and videos.</p>
+                            <a href="https://www.dropbox.com/request/peskgjncwpqiljmkumv6" target="_blank" class="btn-primary" style="display: block; width: 100%; box-sizing: border-box; background: #0061FE; border: none;">
+                                <i data-lucide="upload-cloud" style="margin-right: 8px; vertical-align: middle;"></i> 
+                                <span data-i18n="success_btn_upload">Upload Photos & Videos</span>
+                            </a>
+                        </div>
+                        
+                        <p style="margin-top: 25px; font-size: 0.85rem; color: var(--text-muted);">
+                            <span data-i18n="success_fallback">If the payment screen didn't open automatically,</span> 
+                            <a href="#" id="fallback-pay-btn" target="_blank" style="color: var(--sakura-pink); text-decoration: underline;" data-i18n="success_btn_pay">click here to pay</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq bg-beige">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq_title">FAQ</h2>
+            <div class="faq-list">
+                <details>
+                    <summary data-i18n="faq_q1">How many photos/videos can I send?</summary>
+                    <p data-i18n="faq_a1">You can send up to 30 photos and videos in total.</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q2">How long is the final video?</summary>
+                    <p data-i18n="faq_a2">Depending on your plan, the final video is around 30 to 60 seconds.</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q3">How fast can I receive it?</summary>
+                    <p data-i18n="faq_a3">We usually deliver within 24 hours after receiving all your media.</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q4">Can I request changes?</summary>
+                    <p data-i18n="faq_a4">Yes. One free revision is included with every order.</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q5">Can I post the video on Instagram or TikTok?</summary>
+                    <p data-i18n="faq_a5">Yes! The video is formatted specifically for social media (9:16 ratio).</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q6">Will you post my photos without permission?</summary>
+                    <p data-i18n="faq_a6">No. We respect your privacy and will never post your content without explicit consent.</p>
+                </details>
+                <details>
+                    <summary data-i18n="faq_q7">How do I send my photos?</summary>
+                    <p data-i18n="faq_a7">After submitting the order form, please send your photos/videos through Instagram DM.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 data-i18n="final_cta_title">Ready to turn your Japan trip into a memory movie?</h2>
+            <a href="#order-form" class="btn-primary" data-i18n="cta_send">Send Your Japan Trip Photos</a>
+            <p class="cta-note" data-i18n="final_cta_note">Fill out the form and send us your photos on Instagram DM.</p>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <p data-i18n="footer_text">&copy; 2024 SakuraMemories. Made with ❤️ in Japan.</p>
+    </footer>
+
+    <script src="script.js?v=11"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
